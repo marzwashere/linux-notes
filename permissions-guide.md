@@ -26,3 +26,16 @@ Permissions are represented by three digits (Owner, Group, Others), where each d
 * **Cause:** The core system utilities package (`coreutils`) may be missing in a minimal environment.
 * **Fix:** Install the package via apt:
 * **Verification:** Confirm the binary location and version:
+---
+
+## 3. Real-World Use Case: Making a Script Executable
+
+### The Scenario
+When writing custom Bash scripts (such as a system backup or deployment script like `test-script.sh`), Linux restricts execution by default for security reasons. Attempting to run the script directly results in a permission block.
+
+### Encountered Error
+```bash
+$ ./test-script.sh
+bash: ./test-script.sh: Permission denied
+chmod +x test-script.sh
+./test-script.sh

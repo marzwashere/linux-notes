@@ -20,3 +20,9 @@ Permissions are represented by three digits (Owner, Group, Others), where each d
 ## 3. Quick Troubleshooting
 * **Symptom:** `Permission denied` when trying to run a script.
 * **Fix:** Grant execution rights using `chmod +x filename` or `chmod 755 filename`.
+
+## 4. Troubleshooting: Missing `chmod` / `coreutils`
+* **Symptom:** Running `chmod` returns `Command 'chmod' not found`.
+* **Cause:** The core system utilities package (`coreutils`) may be missing in a minimal environment.
+* **Fix:** Install the package via apt:
+* **Verification:** Confirm the binary location and version:
